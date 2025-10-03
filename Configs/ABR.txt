@@ -1,0 +1,4 @@
+ABR(config)#router ospf 1
+ABR(config-router)#network 223.0.4.0 0.0.0.255 area 0
+ABR(config-router)#network 223.0.10.0 0.0.0.255 area 1
+ABR(config-router)#exit

@@ -1,0 +1,3 @@
+routeur1(config)#router ospf 1
+routeur1(config-router)#network 223.0.0.0 0.0.0.255 area 0
+routeur1(config-router)#end

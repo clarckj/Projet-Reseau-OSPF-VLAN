@@ -1,0 +1,19 @@
+switch1(config)# vlan 2 (pour entrer en mode configuration vlan)
+
+switch1(config-vlan)# name e-commerce (pour lui donner un nom)
+
+switch1(config-vlan)# state active
+
+switch1(config-vlan)# no shutdown (pour l’activer)
+
+switch1(config)# interface gigabitethernet 0/0/0 (on passe sur l’interface voulue)
+
+switch1(config-if)# switchport access vlan 2 (on ajoute le VLAN)
+
+// Configuration du trunk
+
+switch1# configure terminal
+switch1(config)# interface GigabitEthernet 0/1
+switch1(config-if)#switchport trunk encapsulation dot1q
+switch1(config-if)# switchport mode trunk
+switch1(config-if)# switchport trunk allow vlan 2-3
